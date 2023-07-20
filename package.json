@@ -1,0 +1,61 @@
+{
+  "name": "@flasd/brazil-dates",
+  "license": "MIT",
+  "author": "Marcel Coelho",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Brazilian dates",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/brazil-dates.umd.js",
+  "module": "dist/brazil-dates.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/brazil-dates.es.js",
+      "require": "./dist/brazil-dates.umd.js"
+    }
+  },
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "vite build && yarn tsc && rimraf tsconfig.tsbuildinfo",
+    "dev": "vite",
+    "lint:code": "eslint --ext .ts,.tsx src",
+    "lint:fix": "eslint --fix --ext .ts,.tsx ",
+    "lint:format": "prettier --check src",
+    "lint:types": "tsc",
+    "prebuild": "rimraf tsconfig.tsbuildinfo dist",
+    "prepare": "husky install",
+    "pretest:e2e": "tsc && vite build && cpy dist/* tests/parent && cpy dist/* tests/child",
+    "test:unit": "vitest src",
+    "test:unit:coverage": "vitest src --coverage"
+  },
+  "dependencies": {
+    "date-easter": "1.0.2",
+    "date-fns": "2.30.0"
+  },
+  "devDependencies": {
+    "@flasd/no-hats": "1.0.3",
+    "@flasd/pretty-package": "1.0.3",
+    "@types/node": "20.3.1",
+    "@vitest/coverage-v8": "0.32.2",
+    "cpy-cli": "4.2.0",
+    "husky": "8.0.3",
+    "jsdom": "22.1.0",
+    "lint-staged": "13.2.2",
+    "rimraf": "5.0.1",
+    "serve": "14.2.0",
+    "typescript": "5.0.2",
+    "vite": "4.3.9",
+    "vitest": "0.33.0"
+  },
+  "lint-staged": {
+    "package.json": [
+      "pretty-package --write",
+      "no-hats"
+    ],
+    ".{ts,tsx}": [
+      "yarn lint:fix"
+    ]
+  }
+}
