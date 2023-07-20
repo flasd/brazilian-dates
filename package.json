@@ -1,5 +1,5 @@
 {
-  "name": "@flasd/brazil-dates",
+  "name": "@flasd/brazilian-dates",
   "license": "MIT",
   "author": "Marcel Coelho",
   "private": false,
@@ -8,12 +8,12 @@
   "files": [
     "dist"
   ],
-  "main": "dist/brazil-dates.umd.js",
-  "module": "dist/brazil-dates.es.js",
+  "main": "dist/brazilian-dates.umd.js",
+  "module": "dist/brazilian-dates.es.js",
   "exports": {
     ".": {
-      "import": "./dist/brazil-dates.es.js",
-      "require": "./dist/brazil-dates.umd.js"
+      "import": "./dist/brazilian-dates.es.js",
+      "require": "./dist/brazilian-dates.umd.js"
     }
   },
   "types": "dist/index.d.ts",
