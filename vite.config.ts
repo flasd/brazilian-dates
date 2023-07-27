@@ -7,7 +7,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
       name: "BrazilianDates",
-      fileName: format => `${name}.${format}.js`,
+      fileName: format => `brazilian-dates.${format}.js`,
     },
   },
   test: {
