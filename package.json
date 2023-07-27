@@ -3,7 +3,7 @@
   "license": "MIT",
   "author": "Marcel Coelho",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Brazilian dates",
   "files": [
     "dist"
